@@ -425,6 +425,7 @@ public:
         int int_len = sizeof rcv_latency;
         srt_getsockopt(sid, 0, SRTO_RCVLATENCY, &rcv_latency, &int_len);
 
+        output << "STATS=>";
         output << mon.msTimeStamp << ",";
         output << sid << ",";
         output << mon.pktFlowWindow << ",";
